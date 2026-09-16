@@ -31,7 +31,8 @@
             <p class="lead fw-semibold text-white mb-2" id="event-headline">-</p>
             
             <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-			    <span class="badge bg-white bg-opacity-10 px-3 py-2 rounded fs-6 border border-white border-opacity-25" id="hm">
+			    <span class="badge bg-white bg-opacity-10 px-3 py-2 rounded fs-6 border border-white border-opacity-25" id="hm"><a href="index.html" class=" fw-semibold d-inline-flex align-items-center text-white gap-1" style="text-decoration:none;cursor:pointer">
+            <i class="bi bi-house"></i>
         </a></span>
                 <span class="badge bg-white bg-opacity-10 px-3 py-2 rounded fs-6 border border-white border-opacity-25" id="event-date"><i class="bi bi-calendar-event me-2"></i>-</span>
                 <span class="badge bg-danger px-3 py-2 rounded fs-6 fw-bold shadow-sm" id="invoice"></span>
@@ -46,6 +47,7 @@
         
         <!-- KOLOM KIRI: FORM DATA DIRI & PILIHAN SESI -->
         <div class="col-lg-8">
+		<div id="alert-notif-pendaftaran" class="mb-4"></div>
             <form id="form-pendaftaran" action="proses-pendaftaran.php" method="POST">
 <input type="hidden" id="id_event" name="id_event">
 <input type="hidden" id="kodepromo" name="kodepromo">
@@ -208,7 +210,7 @@
                 </div>
 
                 <!-- BUTTON FINAL CHECKOUT -->
-                <button type="submit" class="btn btn-primary w-100 py-2.5 fw-bold d-inline-flex align-items-center justify-content-center gap-2" id="btn-submit-pendaftaran" onclick="prosesSubmitPendaftaran(this)" disabled>
+                <button type="submit" class="btn btn-primary w-100 py-2.5 fw-bold d-inline-flex align-items-center justify-content-center gap-2" id="btn-submit-pendaftaran"  disabled>
                    <i class="bi bi-shield-check-fill" id="icon-btn-submit"></i> <span id="text-btn-submit">Selesaikan & Bayar Sekarang</span>
                 </button>
 
@@ -273,7 +275,7 @@
 </div>
 <!-- Memanggil Bootstrap 5 JS Bundle via CDN -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://localhost.gmlproject.net/idibatam/checkout-script.js?url=https://localhost.gmlproject.net/idibatam"></script>
+<script src="checkout-script.js?url=https://localhost.gmlproject.net/idibatam"></script>
 <script>
 function bukaModalKatalogPromo() {
     // 1. Tampilkan modal pop-up fullscreen menggunakan trigger Bootstrap 5
@@ -381,4 +383,3 @@ function salinKuponKeFormPendaftaran(kodeVoucher) {
 <!-- Penanda panggilan file Javascript eksternal -->
 </body>
 </html>
-
